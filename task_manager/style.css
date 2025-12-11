@@ -1,0 +1,133 @@
+/* style.css */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #495057;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.task-container {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    width: 100%;
+}
+
+.task-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* Task List Styling */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-light);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #ffc107; /* Default border: Medium priority color */
+    transition: all 0.3s;
+}
+
+/* Completed Task Styles */
+.task-item.completed {
+    border-left-color: #28a745; /* Green */
+    opacity: 0.7;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+/* Priority Tags Styling */
+.priority {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.priority.High {
+    background-color: #dc3545; /* Red */
+}
+.priority.Medium {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+.priority.Low {
+    background-color: #17a2b8; /* Cyan */
+}
+
+/* Footer & Status */
+.server-status {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+#loading-status {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.85rem;
+}
