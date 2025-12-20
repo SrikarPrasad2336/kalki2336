@@ -1,0 +1,55 @@
+oops:
+in1 = 78
+print(type(in1))
+class login():
+	def__init__(self.username):
+		username = self.username
+
+class orders(login):
+	def verify():
+
+def login():
+	...
+
+def order():
+	...
+
+
+
+class login:
+	def__init__(first,username,password):
+		first.username = username
+		first.password = password
+	
+	def output():
+		print(first.username)
+		print(first.password)
+
+obj1 = login('Karthik','karthik@132')
+obj1 = login('srikar','srikar@132)
+obj1.output()
+
+output:
+karthik
+karthik@132
+srikar
+srikar@132
+
+
+import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+api_key = os.getenv("HF_API_KEY")
+if not api_key:
+    print("API key not found")
+    exit()
+
+headers = {"Authorization": f"Bearer {api_key}"}
+url = "https://router.huggingface.co"
+payload = {"inputs": "write a quotation for success"}
+
+response = requests.post(url, headers=headers, json=payload)
+result = response.json()
+print(result)
