@@ -1,0 +1,62 @@
+#file handling
+file = open('requirements.txt','r')
+print(file.read())
+file.close()
+
+#================= write operation ==============
+file = open('requirements.txt','w')
+file.write('python class ')
+file.close()
+#================= append operation ==============
+file = open('requirements.txt','a')
+file.write(' to continue the previous text')
+file.close()
+
+#=====================
+with open('requirements.txt','a') as file:
+    file.write(' to work with keyword')
+
+output:
+python class to continue the previous text to work with keyword
+
+#===================== read csv file ================
+file = open('car_price_dataset.csv','r')
+print(file.read())
+file.close()
+
+#==================================== Exception handling ===========================
+try, except, finally
+try:
+    a = 10 / 0
+    print(a)
+except Exception as e:
+    print(e)
+print('python class')
+
+Output:
+division by zero
+python class
+
+#=================================================================
+
+from flask import Flask
+app=Flask(__name__)
+
+@app.route('/home',methods=['GET'])
+def home():
+    return "this is the first route"
+
+
+@app.route('/about', methods=['GET'])
+def about():
+    return "This is the second route"
+
+
+
+app.run(use_reloader = True)
+
+output-1:
+this is the first route
+
+output-2:
+this is the second route
